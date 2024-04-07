@@ -7,7 +7,7 @@ function refreshWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
 let timeElement=document.querySelector("#time");
 let date= new Date(response.data.time*1000);
-let emojiElement=document.querySelector("#emoji")
+
 
   timeElement.innerHTML = formatDate(date);
   cityElement.innerHTML = response.data.city;

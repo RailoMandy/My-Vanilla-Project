@@ -60,10 +60,13 @@ margin-left: 10px;
 .weather-app-temperature-value{
     font-size: 88px;
     font-weight: bold;
-    margin-bottom: 12px;
+    line-height: 88px;
+    
 }
-.weather-app-emoji{font-size: 44px;
-    margin-top: 30px;
+.weather-app-emoji{
+    width: 88px;
+    height: 88px;
+    margin-top: 15px
 }
 .weather-app-temperature-unit{
     margin-top: 16px;

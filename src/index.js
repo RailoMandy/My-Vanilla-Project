@@ -7,6 +7,7 @@ let humidityElement=document.querySelector("#humidity");
 let windSpeedElement=document.querySelector("#wind-speed");
 let timeElement=document.querySelector("#time");
 let date=new Date(response.data.time*1000);
+
 timeElement.innerHTML=formatDate();
 cityElement.innerHTML = response.data.city;
 descriptionElement.innerHTML=response.data.condition.description;

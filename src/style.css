@@ -1,5 +1,5 @@
 body{
-    background-color: #f9f7fe;
+    background-color: #FE027E;
    .roboto-medium {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -11,7 +11,7 @@ a{
     color:#885DF1;
 }
 .weather-app{
-    background: wheat;
+    background: #F7E700;
     max-width: 600px;
     margin: 45px auto;
     padding: 30px;

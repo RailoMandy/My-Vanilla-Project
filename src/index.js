@@ -21,8 +21,7 @@ icon.innerHTML=`<img src="${response.data.condition.icon_url}" alt="emoji-icon"
   windSpeedElement.innerHTML = `${response.data.wind.speed}m/s`;
 }
 function formatDate(date){
- 
-  let minutes=date.getMinutes();
+ let minutes=date.getMinutes();
   let hours=date.getHours();
   let days=[
     "Sunday",

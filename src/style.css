@@ -63,6 +63,8 @@ margin-left: 10px;
     line-height: 88px;
     
 }
+
+.weather-forecast{margin-left: 10px;}
 .weather-app-emoji{
     width: 88px;
     height: 88px;
@@ -76,6 +78,13 @@ margin-left: 10px;
     line-height: 20px;
     color: rgba(39, 33, 66,0.4);
 }
+.material-symbols-outlined {
+    color: black;
+    }
+    .max-temp{
+        color: #FE027E;
+        font-weight: bold;
+    }
 .weather-app-details strong{color: #CB1568;}
 main{
     padding: 30px 0;

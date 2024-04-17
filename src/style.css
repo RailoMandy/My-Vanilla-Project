@@ -11,7 +11,7 @@ a{
     color:#885DF1;
 }
 .weather-app{
-    background: #F7E700;
+    background: #62F608;
     max-width: 600px;
     margin: 45px auto;
     padding: 30px;
@@ -64,7 +64,12 @@ margin-left: 10px;
     
 }
 
-.weather-forecast{margin-left: 10px;}
+.weather-forecast{margin-left: 10px;
+  display: inline-block; 
+  box-sizing: border-box;
+
+
+}
 .weather-app-emoji{
     width: 88px;
     height: 88px;

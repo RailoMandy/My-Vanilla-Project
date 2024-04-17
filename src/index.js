@@ -59,24 +59,26 @@ function displayForecast() {
     forecastHtml += `
       <div class="weather-forecast">
         <div class="weather-day">${day}</div>
-        <span class="material-symbols-outlined" class="condition-icon">thunderstorm</span>
+        <span class="material-symbols-outlined" id="condition-icon">thunderstorm</span>
         <div class="forecast-temperatures">
           <span class="min-temp">10°</span>
           <span class="max-temp">15°</span>
         </div>
       </div>
-      `;
+    `;
   });
 
   let forecastContainer = document.querySelector("#forecast");
   forecastContainer.innerHTML = forecastHtml;
 }
 
+displayForecast();
+
+
 
 let searchFormElement = document.querySelector(".search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
- displayForecast();
 
 
 

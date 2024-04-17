@@ -54,9 +54,6 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
 }
-function displayForecast(response){
-
-}
 
 function getForecast(city){
   let apiKey="7e00d8f1t71e42efc318143acbd6e2oa"
@@ -65,23 +62,26 @@ axios(apiUrl).then(displayForecast);
 
 }
 
-
-
-function displayForecast() {
-  let day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+function displayForecast(response) {
+  
   let forecastHtml = "";
-
-  day.forEach(function (day) {
-    forecastHtml += `
+ response.data.daily.forEach(function (day, index) {
+    if (index < 5){
+      forecastHtml=
+      forecastHtml +
+      `
       <div class="weather-forecast">
-        <div class="weather-day">${day}</div>
-        <span class="material-symbols-outlined" id="condition-icon">thunderstorm</span>
+        <div >Mon</div>
+      <div class="forecast-icon">
+      <img src="${day.condition.icon_url}"class="weather-day">
+      </div>
         <div class="forecast-temperatures">
-          <span class="min-temp">10°</span>
-          <span class="max-temp">15°</span>
+          <span class="min-temp">${Math.round(day.temperature.minimum)}°</span>
+          <span class="max-temp">${Math.round(day.temperature.maximum)}°</span>
         </div>
       </div>
     `;
+    }
   });
 
   let forecastContainer = document.querySelector("#forecast");

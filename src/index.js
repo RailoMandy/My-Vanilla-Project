@@ -19,6 +19,13 @@ function searchCity(city) {
 }
 
 function displayErrorMessage() {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = "";
   cityElement.innerHTML = "Invalid city name";
   descriptionElement.innerHTML = "";

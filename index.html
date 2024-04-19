@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
 <title>Mandy weather-app</title>
@@ -32,13 +33,20 @@ id="search-form-input"/>
         <div>
         <h1 class="weather-app-city" id="city">Pretoria</h1> 
         <p class="weather-app-details">
-            <span id="time">         Friday  13:50</span>, <span id="description"></span> 
-            <br/>
+            <div id="current-date"></div>
+             <span class="material-symbols-outlined">schedule</span>
+            <span id="time"></span>
+           
+            
+            <div class="calendar-conditions">
+             <span class="condition-description"  id="description"></span> 
+             <br>
              <span class="material-symbols-outlined">humidity_percentage</span>
             Humidity: <strong id="humidity"></strong>
             <br>
              <span class="material-symbols-outlined">air</span>
             Wind: <strong id="wind-speed"></strong> 
+            </div>
         </p>
         </div>
         <div class="weather-app-temperature-container">

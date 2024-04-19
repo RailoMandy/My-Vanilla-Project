@@ -2,7 +2,7 @@ function refreshWeather(response) {
   console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
-let cityElement = document.querySelector("#city");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
@@ -12,14 +12,14 @@ let cityElement = document.querySelector("#city");
 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="emoji-icon"
             class="weather-app-emoji">`;
-timeElement.innerHTML = formatDate(date);
+  timeElement.innerHTML = formatDate(date);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}m/s`;
 
-getForecast(response.data.city);
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -58,13 +58,13 @@ function getForecast(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[date.getDay()];
 }
-
 
 function displayForecast(response) {
   console.log(response);
@@ -85,7 +85,7 @@ function displayForecast(response) {
           <span class="max-temp">${Math.round(day.temperature.maximum)}°</span>
         </div>
       </div>
-    `
+    `;
     }
   });
 
@@ -93,7 +93,5 @@ function displayForecast(response) {
   forecastContainer.innerHTML = forecastHtml;
 }
 
-displayForecast();
 let searchFormElement = document.querySelector(".search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-

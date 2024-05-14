@@ -57,7 +57,7 @@ function refreshWeather(response) {
   )}<span class="current-temperature-unit">°C</span>`;
 
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}m/s`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 
   getForecast(response.data.city);
 }
